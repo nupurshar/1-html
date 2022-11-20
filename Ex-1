@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exp 1</title>
+  </head>
+  <body>
+    <div>
+      <h1>Area of triangle</h1>
+
+      <label for="">base if triangle</label>
+      <input type="text" id="base" />
+      <label for="">height if triangle</label>
+      <input type="text" id="height" />
+      <button onclick="getAreaTriangle()">submit</button>
+      <h2>Area of triangle is <span id="result1"></span></h2>
+    </div>
+
+    <div>
+      <h1>Area of rectangle</h1>
+      <label for="">Length of rectangle</label>
+      <input type="text" id="length" />
+      <label for="">Width of rectangle</label>
+      <input type="text" id="width" />
+      <button onclick="getAreaRect()">submit</button>
+      <h2>Area of rectangle is <span id="result2"></span></h2>
+    </div>
+
+    <div>
+      <h1>Area of circle</h1>
+      <label for="">radius of circle</label>
+      <input type="text" id="radius" />
+      <button onclick="getAreaCircle()">submit</button>
+      <h2>Area of circle is <span id="result3"></span></h2>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     function getAreaTriangle() {
+  const base = parseInt(document.getElementById("base").value);
+  const height = parseInt(document.getElementById("height").value);
+
+
+  const area = 0.5 * base * height;
+  document.getElementById("result1").innerHTML = area;
+}
+
+function getAreaRect() {
+  const length = parseInt(document.getElementById("length").value);
+  const width = parseInt(document.getElementById("width").value);
+
+  const area = length * width;
+  document.getElementById("result2").innerHTML = area;
+}
+
+function getAreaCircle() {
+  const radius = parseInt(document.getElementById("radius").value);
+
+  const area = 3.14 * radius * radius;
+  document.getElementById("result3").innerHTML = area;
+}
