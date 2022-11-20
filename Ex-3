@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exp3</title>
+  </head>
+  <body>
+    <div>
+      <!-- reverse the string -->
+      <label for="string"> String </label>
+      <input type="text" placeholder="enter the string" id="str" />
+      <button onclick="reverse()">reverse</button>
+      <h3>Reverse of given string is</h3>
+      <p id="result1"></p>
+      <br />
+      <!-- replace the string -->
+      <label for="string"> Character you want to replace </label>
+      <input type="text" placeholder="enter the string" id="str2" />
+      <label for="string"> Character you want to replace with </label>
+      <input type="text" placeholder="enter the string" id="str3" />
+      <button onclick="replace()">reverse</button>
+      <h3>String after replace</h3>
+      <p id="result2"></p>
+      <br />
+      <!-- is palindrome -->
+      <h3>given string is</h3>
+      <p id="result3"></p>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function reverse() {
+  const str1 = document.getElementById("str").value;
+
+  let revStr = "";
+  for (let i = 0; i < str1.length; i++) {
+    revStr += str1.charAt(str1.length - i - 1);
+  }
+
+  document.getElementById("result1").innerHTML = revStr;
+  if (revStr === str1) {
+    document.getElementById("result3").innerHTML = "palindrome";
+  } else {
+    document.getElementById("result3").innerHTML = "not a palindrome";
+  }
+}
+
+function replace() {
+  const str1 = document.getElementById("str").value;
+  const str2 = document.getElementById("str2").value;
+  const str3 = document.getElementById("str3").value;
+
+  const newStr = str1.replace(str2, str3);
+  document.getElementById("result2").innerHTML = newStr;
+}
+
