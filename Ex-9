@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="div">
+      <input type="text" placeholder="enter the value: " name="" id="result" />
+      <button value="1" onclick="setvalue(1)">1</button>
+      <button value="2" onclick="setvalue(2)">2</button>
+      <button value="3" onclick="setvalue(3)">3</button>
+      <button value="4" onclick="setvalue(4)">4</button>
+      <button value="5" onclick="setvalue(5)">5</button>
+      <button value="6" onclick="setvalue(6)">6</button>
+      <button value="7" onclick="setvalue(7)">7</button>
+      <button value="8" onclick="setvalue(8)">8</button>
+      <button value="9" onclick="setvalue(9)">9</button>
+      <button value="0" onclick="setvalue(0)">0</button>
+      <button value="+" onclick="setvalue('+')">+</button>
+      <button value="-" onclick="setvalue('-')">-</button>
+      <button value="/" onclick="setvalue('/')">/</button>
+      <button value="*" onclick="setvalue('*')">*</button>
+      <button value="" onclick="calculate()">=====</button>
+      <button onclick="clearout()">clear</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// script.js
+const res = document.getElementById("result")
+
+function setvalue(num) {
+  res.value += num
+}
+
+function calculate() {
+  res.value = eval(res.value)
+}
+
+function clearout() {
+  console.log("suhas")
+  res.value = ""
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    calculate()
+  }
+})
+
