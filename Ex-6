@@ -1,0 +1,105 @@
+<!-- index.html
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="main">
+      Add elements in array (use spaces)
+      <input type="text" id="arr" /> <br />
+      <button onclick="createArr()">Create Array</button>
+    </section>
+    <div id="result1">
+      <h1>Remove element</h1>
+      which element you wanna remove <input type="text" id="remEl" />
+      <button onclick="removeElement()">remove</button>
+    </div>
+    <div id="result2">
+      <h1>Find element</h1>
+      which element you check <input type="text" id="findEl" />
+      <button onclick="findElement()">remove</button>
+    </div>
+    <div id="result3">
+      <h1>Check empty</h1>
+      <button onclick="isEmpty()">remove</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//script.js
+
+function createArr() {
+  const arrString = document.getElementById("arr").value;
+  const main = document.getElementById("main");
+
+  const arr = arrString.split(" ");
+
+  const para = document.createElement("p");
+  para.innerHTML = `given array : [${arr}]`;
+  main.appendChild(para);
+}
+
+function removeElement() {
+  const arrString = document.getElementById("arr").value;
+  const arr = arrString.split(" ");
+
+  const result = document.getElementById("result1");
+  const remEl = document.getElementById("remEl").value;
+
+  const i = arr.indexOf(remEl);
+  arr.splice(i, 1);
+  const para = document.createElement("p");
+  para.innerHTML = `updated array : [${arr}]`;
+  result.appendChild(para);
+}
+
+function findElement() {
+  const arrString = document.getElementById("arr").value;
+  const arr = arrString.split(" ");
+
+  const result = document.getElementById("result2");
+  const findEl = document.getElementById("findEl").value;
+
+  const para = document.createElement("p");
+  para.innerHTML = `${findEl} includes in [${arr}] : ${arr.includes(findEl)}`;
+  result.appendChild(para);
+}
+
+function isEmpty() {
+  const arrString = document.getElementById("arr").value;
+  const arr = arrString.split(" ");
+
+  const result = document.getElementById("result3");
+
+  const para = document.createElement("p");
+
+  para.innerHTML = `given array is empty : ${arr[0] === ""}`;
+  result.appendChild(para);
+}
