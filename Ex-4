@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      string 1 : <input type="text" id="str1" /> <br />
+      string 2 : <input type="text" id="str2" /> <br />
+      <button onclick="check()">check</button>
+    </section>
+    <div>
+      <h1>result</h1>
+      <h3>Mathematical operators:</h3>
+      <span id="result1"></span>
+      <h3>Strictly check:</h3>
+      <span id="result2"></span>
+      <h3>Match:</h3>
+      <span id="result3"></span>
+      <h3>Match All:</h3>
+      <span id="result4"></span>
+      <h3>local compare:</h3>
+      <span id="result5"></span>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function check() {
+  const str1 = document.getElementById("str1").value;
+  const str2 = document.getElementById("str2").value;
+  const result1 = document.getElementById("result1");
+  const result2 = document.getElementById("result2");
+  const result3 = document.getElementById("result3");
+  const result4 = document.getElementById("result4");
+  const result5 = document.getElementById("result5");
+
+  result1.innerHTML = `str1 > str2 = ${str1 > str2}`;
+  result2.innerHTML = `str1 === str2 = ${str1 === str2}`;
+  result3.innerHTML = `str1.match(str2) = ${str1.match(str2)}`;
+  result4.innerHTML = `str1.matchAll(str2) = ${str1.matchAll(str2)}`;
+  result5.innerHTML = `str1.localeCompare(str2) = ${str1.localeCompare(str2)}`;
+}
