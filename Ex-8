@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #main {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    div {
+      border: 1px solid red;
+    }
+  </style>
+  <body>
+    <main id="main" onmouseover="changeBgColor()" onmouseout="removeBgColor()">
+      <div id="div1">
+        <input
+          type="text"
+          id="name"
+          onfocus="changeBgColorDiv()"
+          onfocusout="removeBgColorDiv()"
+          placeholder="click here to focus"
+        />
+      </div>
+      <div id="div2" onclick="changeColorRed()">click to change color</div>
+      <div id="div3" onclick="changeColorPink()">click to change color</div>
+      <div id="div4" onclick="changeColorBlack()">click to change color</div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function changeBgColor() {
+  document.getElementById("main").style.background = "#add8e6";
+}
+
+function removeBgColor() {
+  document.getElementById("main").style.background = "#ffffff";
+}
+
+function changeBgColorDiv() {
+  document.getElementById("div1").style.background = "#90ee90";
+}
+
+function removeBgColorDiv() {
+  document.getElementById("div1").style.background = "#fff";
+}
+
+function changeColorRed() {
+  document.getElementById("div2").style.background = "#ff0000";
+}
+function changeColorBlack() {
+  document.getElementById("div4").style.background = "#000000";
+}
+function changeColorPink() {
+  document.getElementById("div3").style.background = "#ffc0cb";
+}
