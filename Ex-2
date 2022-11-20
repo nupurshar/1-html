@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exp2</title>
+  </head>
+  <body>
+    <div>
+      <label for="">Number:</label>
+      <input type="text" placeholder="enter the number" id="num" />
+      <button onclick="getTable()">submit</button>
+      <h2>Table of given number is</h2>
+      <div id="result"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getTable() {
+  const num = parseInt(document.getElementById("num").value)
+  const result = document.getElementById("result")
+
+  for (let i = 1; i <= 10; i++) {
+    const p = document.createElement("p")
+    p.innerHTML = `${num} x ${i} = ${num * i}`
+
+    result.appendChild(p)
+  }
+}
