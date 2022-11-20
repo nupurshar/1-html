@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Area Computation</title>
+        <script type="text/javascript" src="exp1areajs.js"></script>
+    </head>
+    <body>
+        <h2>Area of rectangle</h2>
+        <label for="length">Enter Length</label>
+        <input type="number" name="length" id="rectLen"/>
+
+        <label for="breadth">Enter Breadth</label>
+        <input type="number" name="breadth" id="rectBre"/>
+
+        <button type="submit" onclick="areaOfRectangle()">calculateArea</button>
+        <h4 id="rectarea" style="color: red ">Area of rectangle is: ?</h4>   
+
+        
+        <h2>Area of triangle</h2>
+        <label for="base">Enter Base</label>
+        <input type="number" name="base" id="triBase"/>
+
+        <label for="height">Enter Height</label>
+        <input type="number" name="height" id="triHei"/>
+
+        <button type="submit" onclick="areaOfTriangle()">computeArea</button>
+        <h4 id="triarea" style="color: red ">Area of triangle is: ?</h4>
+
+        <h2>Area of Circle</h2>
+        <label>Enter radius</label>
+        <input type="number" id="radius"/>
+
+        <button type="submit" onclick="areaOfCircle()">computeArea</button>
+        <h4 id="circlearea" style="color: red ">Area of circle is: ?</h4>
+        
+    </body>
+</html>
