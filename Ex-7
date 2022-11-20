@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="result">
+      <h1>Initial Array:</h1>
+      <p id="initialArr"></p>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const arr = [];
+console.log(arr);
+
+const obj1 = {
+  name: "Rahul Pandey",
+  age: 21,
+  College: "SCOE",
+  RollNo: 48,
+};
+
+arr.push(obj1);
+
+console.log(arr);
+
+const obj2 = {
+  name: "Sanket Bhosle",
+  age: 21,
+  College: "SCOE",
+  RollNo: 28,
+};
+
+arr.unshift(obj2);
+console.log(arr);
+
+const obj3 = {
+  name: "Sachin Rao",
+  age: 21,
+  College: "SCOE",
+  RollNo: 72,
+};
+
+arr.push(obj3);
+console.log(arr);
+
+console.log(`Array.isArray(arr): ${Array.isArray(arr)}`);
